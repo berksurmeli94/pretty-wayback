@@ -25,14 +25,12 @@ jobs:
 
       - name: Deploy to AWS
         env:
-          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
           DEPLOY_SERVER_IP: ${{ secrets.DEPLOY_SERVER_IP }}
         run: |
           ssh -i ~/.ssh/id_rsa ubuntu@$DEPLOY_SERVER_IP << 'EOF'
             set -e
             cd /home/ubuntu/app
             git pull origin main
-            export RAILS_MASTER_KEY="${RAILS_MASTER_KEY}"
             export RAILS_ENV=production
             docker-compose down
             docker-compose up --build -d
