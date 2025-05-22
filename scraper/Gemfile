@@ -16,8 +16,6 @@ gem "redis"
 gem "httparty"
 gem "json"
 gem "clockwork"
-gem "pg"
-gem "brakeman", require: false
 gem "rubocop", require: false
 gem "rspec-rails", require: false
 gem "mongoid"

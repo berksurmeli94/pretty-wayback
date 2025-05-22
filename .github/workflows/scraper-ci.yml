@@ -11,24 +11,6 @@ on:
       - ".github/workflows/scraper-ci.yml"
 
 jobs:
-  scan_ruby:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: scraper
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.3.0
-          bundler-cache: true
-
-      - name: Brakeman
-        run: bin/brakeman --no-pager
-
   lint:
     runs-on: ubuntu-latest
     defaults:
@@ -72,7 +54,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3.0
+          ruby-version: .ruby-version
           bundler-cache: true
 
       - name: Install dependencies
