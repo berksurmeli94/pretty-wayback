@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  worker:
+    build: .
+    command: bundle exec sidekiq
+    environment:
+      RAILS_ENV: production
+
+  clock:
+    build: .
+    command: bundle exec clockwork lib/clock.rb
+    environment:
+      RAILS_ENV: production

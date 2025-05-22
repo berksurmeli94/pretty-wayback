@@ -1,0 +1,3 @@
+class Manual < ApplicationRecord
+    
+end
