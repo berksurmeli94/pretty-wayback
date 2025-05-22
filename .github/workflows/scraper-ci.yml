@@ -26,6 +26,10 @@ jobs:
           ruby-version: 3.3.0
           bundler-cache: true
 
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
       - name: Rubocop
         run: bin/rubocop -f github
 
@@ -54,7 +58,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: .ruby-version
+          ruby-version: 3.3.0
           bundler-cache: true
 
       - name: Install dependencies
