@@ -82,8 +82,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
-    brakeman (7.0.2)
-      racc
     bson (3.2.7)
     builder (3.3.0)
     clockwork (3.0.2)
@@ -207,7 +205,6 @@ GEM
     parser (3.3.8.0)
       ast (~> 2.4.1)
       racc
-    pg (1.5.9)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -365,7 +362,6 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  brakeman
   clockwork
   debug
   httparty
@@ -375,7 +371,6 @@ DEPENDENCIES
   mongoid-rspec
   mongoid-slug
   mongoid-uuid
-  pg
   puma (>= 5.0)
   rails (~> 8.0.2)
   redis
