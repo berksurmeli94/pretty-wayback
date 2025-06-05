@@ -1,3 +1,13 @@
+terraform {
+  backend "s3" {
+    bucket         = "pretty-wayback-terraform-state"
+    key            = "envs/dev/terraform.tfstate"
+    region         = "eu-central-1"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
+  }
+}
+
 module "redis" {
   source   = "./modules/redis"           # redis modülünün yolu
   ami_id   = var.ami_ids["redis"]        # redis için ami_id'yi dışarıdan al
