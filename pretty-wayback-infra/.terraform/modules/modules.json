@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"elasticsearch","Source":"./modules/elasticsearch","Dir":"modules/elasticsearch"},{"Key":"jobs_worker","Source":"./modules/services/jobs-worker","Dir":"modules/services/jobs-worker"},{"Key":"postgres","Source":"./modules/postgres","Dir":"modules/postgres"},{"Key":"redis","Source":"./modules/redis","Dir":"modules/redis"}]}

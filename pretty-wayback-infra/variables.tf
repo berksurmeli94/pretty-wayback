@@ -1,22 +1,14 @@
-variable "aws_region" {
-  default = "eu-central-1"
-}
-
-variable "ami_id" {
-  description = "Ubuntu AMI ID"
-  type        = string
-}
-
-variable "instance_type" {
-  default = "t2.micro"
+variable "ami_ids" {
+  description = "Map of AMI IDs for each service"
+  type        = map(string)
 }
 
 variable "key_name" {
-  description = "SSH key pair name from AWS"
-  type        = string
+  description = "SSH key pair name"
 }
 
-variable "private_key_path" {
-  description = "Path to your .pem file"
-  type        = string
-}
+variable "db_user" {}
+variable "db_pass" {}
+variable "db_name" {}
+
+variable "worker_image" {}
