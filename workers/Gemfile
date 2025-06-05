@@ -1,0 +1,36 @@
+source "https://rubygems.org"
+
+gem "rails", "~> 8.0.2"
+gem "sidekiq"
+gem "redis"
+
+# Required for boot performance
+gem "bootsnap", require: false
+
+# Time zone support for Windows (safe to keep)
+gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "elasticsearch", "~> 8.0"
+
+group :development do
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'guard-rubocop', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rake', require: false
+  gem 'rubocop-rspec', require: false
+end
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "brakeman", require: false
+  gem "rubocop-rails-omakase", require: false
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+end
+
+group :test do
+  gem "webmock" # if your jobs fetch remote pages
+  gem "fakeredis" # optional: for isolated Sidekiq/Redis tests
+end
+
