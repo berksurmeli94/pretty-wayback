@@ -1,0 +1,6 @@
+pretty-wayback-infra/terraform.tfvars
+pretty-wayback-infra/terraform.tfstate
+pretty-wayback-infra/terraform.tfstate.backup
+pretty-wayback-infra/myws.pem
+pretty-wayback-infra/.terraform.lock.hcl
+pretty-wayback-infra/.terraform/providers/registry.terraform.io/hashicorp/aws/5.99.1/darwin_arm64/terraform-provider-aws_v5.99.1_x5
