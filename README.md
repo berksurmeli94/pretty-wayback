@@ -19,7 +19,7 @@
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/pretty-wayback.git
+   git clone https://github.com/berksurmeli94/pretty-wayback.git
    cd pretty-wayback
    ```
 
@@ -29,7 +29,3 @@
 
 3. **Set up workers:**
    - See [workers/README.md](workers/) for details.
-
-## License
-
-[MIT](LICENSE)
