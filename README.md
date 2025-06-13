@@ -26,6 +26,3 @@
 2. **Configure infrastructure:**
 
    - See [pretty-wayback-infra/README.md](pretty-wayback-infra/) for details.
-
-3. **Set up workers:**
-   - See [workers/README.md](workers/) for details.
